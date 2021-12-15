@@ -5,7 +5,7 @@ const yargs = require("yargs/yargs"),
 	{ _ } = argv,
 	{ spawn } = require("child_process"),
 	possibleFlags = {
-		double: ["yay", "no-sync-db", "confirm"],
+		double: ["yay", "no-sync-database", "confirm"],
 		single: ["y", "n", "c"],
 	};
 
