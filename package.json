@@ -1,0 +1,37 @@
+{
+	"name": "pkgmng",
+	"version": "1.0.0",
+	"description": "Simple pacman and yay manager for simple people like me.",
+	"main": "pkg-install.js",
+	"scripts": {
+		"format": "prettier --write .",
+		"build-x64": "pkg -t node14-linux-x64 src/pkgmng.js --out-path ./builds/pkgmng-x64",
+		"build-arm64": "pkg node14-linux-arm64 src/pkgmng.js  -o pkgmng-arm64 --out-path ./builds/pkgmng-arm64",
+		"prepublish": "npm run format"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Dragonizedpizza/pkgmng.git"
+	},
+	"keywords": [
+		"package",
+		"manager",
+		"pacman",
+		"yay",
+		"arch"
+	],
+	"author": "Dragonizedpizza",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Dragonizedpizza/pkgmng/issues"
+	},
+	"homepage": "https://github.com/Dragonizedpizza/pkgmng#readme",
+	"devDependencies": {
+		"pkg": "^5.5.1",
+		"prettier": "^2.5.1"
+	},
+	"dependencies": {
+		"colors": "^1.4.0",
+		"yargs": "^17.3.0"
+	}
+}
